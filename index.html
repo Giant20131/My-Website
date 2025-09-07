@@ -8,13 +8,13 @@
   <style>
     body { background-color: #1a1b26; color: #e5e7eb; }
 
-    /* Glow only for titles */
+    /* Neon Title Glow (Purple + Blue mix) */
     .neon-title {
-      color: #3b82f6;
-      text-shadow: 0 0 6px #3b82f6, 0 0 12px #3b82f6;
+      color: #a855f7;
+      text-shadow: 0 0 6px #a855f7, 0 0 12px #8b5cf6, 0 0 18px #3b82f6;
     }
 
-    /* Project boxes glow only on border */
+    /* Project Boxes */
     .neon-card {
       background-color: #252735;
       border: 2px solid transparent;
@@ -22,23 +22,36 @@
       border-radius: 1rem;
     }
     .neon-card:hover {
-      border-color: #3b82f6;
-      box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6;
+      border-color: #a855f7;
+      box-shadow: 0 0 10px #a855f7, 0 0 20px #8b5cf6, 0 0 30px #3b82f6;
       transform: scale(1.05);
     }
 
-    /* Navbar glow when scrolling */
+    /* Navbar Glow */
     header {
       transition: border-bottom 0.3s ease, box-shadow 0.3s ease;
     }
     header.scrolled {
-      border-bottom: 2px solid #3b82f6;
-      box-shadow: 0 0 8px #3b82f6;
+      border-bottom: 2px solid #a855f7;
+      box-shadow: 0 0 8px #a855f7, 0 0 15px #3b82f6;
     }
 
-    /* Icon hover glow */
+    /* Hover Glow for Icons + Buttons */
     .glow-hover:hover {
-      filter: drop-shadow(0 0 6px currentColor);
+      filter: drop-shadow(0 0 8px #a855f7);
+      color: #c084fc;
+    }
+    .glow-btn {
+      background-color: #a855f7;
+      color: white;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      transition: 0.3s;
+      box-shadow: 0 0 8px #a855f7;
+    }
+    .glow-btn:hover {
+      background-color: #9333ea;
+      box-shadow: 0 0 12px #a855f7, 0 0 20px #3b82f6;
     }
   </style>
 </head>
@@ -46,14 +59,14 @@
   
   <!-- Navbar -->
   <header id="navbar" class="flex justify-between items-center p-6 bg-[#252735] shadow-lg sticky top-0 z-50">
-    <h1 class="text-2xl font-bold text-blue-400 neon-title">
+    <h1 class="text-2xl font-bold neon-title">
       Digital Boy
       <span class="block text-sm text-gray-400">Innovating Electronics, Inspiring Minds ⚡</span>
     </h1>
     <nav class="space-x-6 text-lg">
-      <a href="#projects" class="hover:text-yellow-400">Projects</a>
-      <a href="#connect" class="hover:text-yellow-400">Connect</a>
-      <a href="#contact" class="hover:text-yellow-400">Contact</a>
+      <a href="#projects" class="hover:text-purple-400 glow-hover">Projects</a>
+      <a href="#connect" class="hover:text-purple-400 glow-hover">Connect</a>
+      <a href="#contact" class="hover:text-purple-400 glow-hover">Contact</a>
     </nav>
   </header>
 
@@ -71,14 +84,14 @@
       <!-- RC Car -->
       <a href="https://github.com/Giant20131/RC_CAR" target="_blank" 
          class="neon-card p-6 block">
-        <h4 class="text-xl font-semibold mb-2 text-blue-300">🏎️ RC Car using ESP32</h4>
+        <h4 class="text-xl font-semibold mb-2 text-purple-300">🏎️ RC Car using ESP32</h4>
         <p class="text-gray-300">A Wi-Fi controlled RC car built with ESP32, featuring smartphone control and real-time response.</p>
       </a>
 
       <!-- Home Automation -->
       <a href="https://github.com/Giant20131/Blynk-Home-Automation" target="_blank" 
          class="neon-card p-6 block">
-        <h4 class="text-xl font-semibold mb-2 text-blue-300">🏠📡 Home Automation using ESP32</h4>
+        <h4 class="text-xl font-semibold mb-2 text-purple-300">🏠📡 Home Automation using ESP32</h4>
         <p class="text-gray-300">Control home appliances with ESP32 via smartphone app and Wi-Fi, enabling smart home automation.</p>
       </a>
 
@@ -112,9 +125,7 @@
   <section id="contact" class="py-16 px-6 bg-[#252735] text-center">
     <h3 class="text-3xl font-bold neon-title mb-6">Contact Me</h3>
     <p class="text-gray-300 mb-4">Let’s collaborate on Arduino & ESP32 projects!</p>
-    <a href="mailto:technicalmasharduino@gmail.com" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">
-      📧 Send Email
-    </a>
+    <a href="mailto:technicalmasharduino@gmail.com" class="glow-btn">📧 Send Email</a>
   </section>
 
   <!-- Footer -->
