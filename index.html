@@ -5,120 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Boy - Arduino & ESP32 Projects</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { background-color: #1a1b26; color: #e5e7eb; }
-
-    /* Purple + Blue Neon Glow */
-    .neon-title {
-      color: #a855f7;
-      text-shadow: 0 0 6px #a855f7, 0 0 12px #8b5cf6, 0 0 18px #3b82f6;
-    }
-
-    .neon-card {
-      background-color: #252735;
-      border: 2px solid transparent;
-      border-radius: 1rem;
-      transition: 0.3s;
-    }
-    .neon-card:hover {
-      border-color: #a855f7;
-      box-shadow: 
-        0 0 8px #a855f7,
-        0 0 16px #8b5cf6,
-        0 0 24px #3b82f6;
-      transform: scale(1.05);
-    }
-
-    /* Navbar Glow */
-    header.scrolled {
-      border-bottom: 2px solid #a855f7;
-      box-shadow: 0 0 6px #a855f7, 0 0 12px #3b82f6;
-    }
-
-    /* Hover Glow for Icons + Buttons */
-    .glow-hover:hover {
-      filter: drop-shadow(0 0 6px #a855f7) drop-shadow(0 0 12px #3b82f6);
-      color: #c084fc;
-    }
-
-    .glow-btn {
-      background-color: #a855f7;
-      color: white;
-      border-radius: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      transition: 0.3s;
-      box-shadow: 0 0 6px #a855f7, 0 0 12px #3b82f6;
-    }
-    .glow-btn:hover {
-      background-color: #9333ea;
-      box-shadow: 
-        0 0 10px #a855f7,
-        0 0 18px #8b5cf6,
-        0 0 26px #3b82f6;
-    }
-  </style>
 </head>
-<body class="font-sans">
+<body class="bg-[#1a1b26] text-gray-200 font-sans">
   
   <!-- Navbar -->
-  <header id="navbar" class="flex justify-between items-center p-6 bg-[#252735] shadow-lg sticky top-0 z-50">
-    <h1 class="text-2xl font-bold neon-title">
+  <header class="flex justify-between items-center p-6 bg-[#252735] shadow-lg sticky top-0 z-50">
+    <h1 class="text-2xl font-bold text-blue-400">
       Digital Boy
       <span class="block text-sm text-gray-400">Innovating Electronics, Inspiring Minds ⚡</span>
     </h1>
     <nav class="space-x-6 text-lg">
-      <a href="#projects" class="hover:text-purple-400 glow-hover">Projects</a>
-      <a href="#connect" class="hover:text-purple-400 glow-hover">Connect</a>
-      <a href="#contact" class="hover:text-purple-400 glow-hover">Contact</a>
+      <a href="#projects" class="hover:text-yellow-400">Projects</a>
+      <a href="#contact" class="hover:text-yellow-400">Contact</a>
+      <a href="https://github.com/Giant20131" target="_blank" class="hover:text-yellow-400">GitHub</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="text-center py-20 px-6">
-    <h2 class="text-4xl md:text-5xl font-bold neon-title mb-4">Welcome to Digital Boy</h2>
+    <h2 class="text-4xl md:text-5xl font-bold text-blue-400 mb-4">Welcome to Digital Boy</h2>
     <p class="text-xl text-gray-300 mb-6">Exploring Arduino & ESP32 projects that turn ideas into reality 🚀</p>
+    <div class="flex justify-center space-x-6">
+      <!-- GitHub -->
+      <a href="https://github.com/Giant20131" target="_blank" class="text-gray-300 hover:text-white text-4xl">
+        <i class="fab fa-github"></i>
+      </a>
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@digitalboy_projects/videos" target="_blank" class="text-red-500 hover:text-red-400 text-4xl">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects" class="py-16 px-6">
-    <h3 class="text-3xl font-bold text-center mb-10 neon-title">Featured Projects</h3>
+    <h3 class="text-3xl font-bold text-center mb-10 text-yellow-400">Featured Projects</h3>
     <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
       
-      <!-- RC Car -->
+      <!-- Project 1: RC Car -->
       <a href="https://github.com/Giant20131/RC_CAR" target="_blank" 
-         class="neon-card p-6 block">
-        <h4 class="text-xl font-semibold mb-2 text-purple-300">🏎️ RC Car using ESP32</h4>
+         class="bg-[#252735] rounded-2xl shadow-lg p-6 hover:scale-105 transition card block">
+        <h4 class="text-xl font-semibold mb-2 text-blue-300">🏎️ RC Car using ESP32</h4>
         <p class="text-gray-300">A Wi-Fi controlled RC car built with ESP32, featuring smartphone control and real-time response.</p>
       </a>
 
-      <!-- Home Automation -->
+      <!-- Project 2: Home Automation -->
       <a href="https://github.com/Giant20131/Blynk-Home-Automation" target="_blank" 
-         class="neon-card p-6 block">
-        <h4 class="text-xl font-semibold mb-2 text-purple-300">🏠📡 Home Automation using ESP32</h4>
+         class="bg-[#252735] rounded-2xl shadow-lg p-6 hover:scale-105 transition card block">
+        <h4 class="text-xl font-semibold mb-2 text-blue-300">🏠📡 Home Automation using ESP32</h4>
         <p class="text-gray-300">Control home appliances with ESP32 via smartphone app and Wi-Fi, enabling smart home automation.</p>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- Connect With Me -->
-  <section id="connect" class="py-16 px-6 text-center">
-    <h3 class="text-3xl font-bold neon-title mb-8">Connect With Me</h3>
-    <div class="flex justify-center space-x-10">
-      
-      <!-- GitHub -->
-      <a href="https://github.com/Giant20131" target="_blank" class="hover:scale-110 transition glow-hover">
-        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="text-gray-300 hover:text-white" viewBox="0 0 24 24">
-          <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.096 3.292 9.408 7.868 10.942.576.108.786-.25.786-.554 0-.274-.01-1-.016-1.962-3.202.696-3.878-1.543-3.878-1.543-.524-1.334-1.28-1.688-1.28-1.688-1.048-.716.08-.702.08-.702 1.16.082 1.77 1.192 1.77 1.192 1.03 1.766 2.704 1.256 3.362.96.106-.746.402-1.256.732-1.544-2.554-.29-5.238-1.278-5.238-5.684 0-1.256.448-2.28 1.184-3.084-.118-.292-.514-1.468.112-3.06 0 0 .968-.31 3.172 1.18a11.02 11.02 0 0 1 2.888-.388c.98.004 1.97.132 2.888.388 2.204-1.49 3.172-1.18 3.172-1.18.626 1.592.23 2.768.112 3.06.736.804 1.184 1.828 1.184 3.084 0 4.416-2.688 5.39-5.25 5.676.414.36.784 1.096.784 2.21 0 1.596-.014 2.882-.014 3.276 0 .308.206.668.792.552C20.708 21.408 24 17.096 24 12 24 5.648 18.352.5 12 .5z"/>
-        </svg>
-      </a>
-
-      <!-- YouTube -->
-      <a href="https://www.youtube.com/@digitalboy_projects/videos" target="_blank" class="hover:scale-110 transition glow-hover">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 576 512">
-          <path fill="#FF0000" d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.5-48.6C465.3 64 288 64 288 64S110.7 64 74.8 75.5c-23.7 6.3-42.2 24.9-48.5 48.6C16 160.1 16 256 16 256s0 95.9 10.3 131.9c6.3 23.7 24.8 42.3 48.5 48.6C110.7 448 288 448 288 448s177.3 0 213.2-11.5c23.7-6.3 42.2-24.9 48.5-48.6C560 351.9 560 256 560 256s0-95.9-10.3-131.9z"/>
-          <path fill="#fff" d="M232 334.9V177.1c0-9.5 10.3-15.4 18.5-10.6l142.5 78.9c8.2 4.5 8.2 16.7 0 21.2L250.5 345.5c-8.2 4.7-18.5-1-18.5-10.6z"/>
-        </svg>
       </a>
 
     </div>
@@ -126,9 +61,11 @@
 
   <!-- Contact Section -->
   <section id="contact" class="py-16 px-6 bg-[#252735] text-center">
-    <h3 class="text-3xl font-bold neon-title mb-6">Contact Me</h3>
+    <h3 class="text-3xl font-bold text-yellow-400 mb-6">Contact Me</h3>
     <p class="text-gray-300 mb-4">Let’s collaborate on Arduino & ESP32 projects!</p>
-    <a href="mailto:giant20131@gmail.com" class="glow-btn">📧 Send Email</a>
+    <a href="mailto:your-email@example.com" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">
+      📧 Send Email
+    </a>
   </section>
 
   <!-- Footer -->
@@ -136,17 +73,7 @@
     © 2025 Digital Boy | Built with ❤️ for innovation
   </footer>
 
-  <!-- Navbar Scroll Effect -->
-  <script>
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 10) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
-      }
-    });
-  </script>
-
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
