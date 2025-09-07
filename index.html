@@ -1,79 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital Boy - Arduino & ESP32 Projects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Boy | Arduino & ESP Projects</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #e5e5e5;
+    }
+    .neon-accent {
+      color: #00eaff;
+      text-shadow: 0 0 6px #00eaffaa;
+    }
+    .neon-border {
+      border: 1px solid #00eaff88;
+      box-shadow: 0 0 12px #00eaff55;
+    }
+    .neon-btn {
+      background: linear-gradient(90deg, #ff0099, #4933ff);
+      color: white;
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 12px #ff009977;
+    }
+    .neon-btn:hover {
+      box-shadow: 0 0 20px #ff0099, 0 0 25px #4933ff;
+      transform: translateY(-3px);
+    }
+    .neon-card {
+      background: #111111;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .neon-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 18px #00eaff88;
+    }
+    footer {
+      border-top: 1px solid #00eaff44;
+    }
+  </style>
 </head>
-<body class="bg-[#1a1b26] text-gray-200 font-sans">
-  
+<body class="font-sans">
+
   <!-- Navbar -->
-  <header class="flex justify-between items-center p-6 bg-[#252735] shadow-lg sticky top-0 z-50">
-    <h1 class="text-2xl font-bold text-blue-400">
-      Digital Boy
-      <span class="block text-sm text-gray-400">Innovating Electronics, Inspiring Minds ⚡</span>
-    </h1>
-    <nav class="space-x-6 text-lg">
-      <a href="#projects" class="hover:text-yellow-400">Projects</a>
-      <a href="#contact" class="hover:text-yellow-400">Contact</a>
-      <a href="https://github.com/Giant20131" target="_blank" class="hover:text-yellow-400">GitHub</a>
-    </nav>
-  </header>
+  <nav class="flex flex-col md:flex-row justify-between items-center p-5 bg-black bg-opacity-80 sticky top-0 z-50">
+    <div class="text-center md:text-left">
+      <h1 class="text-3xl font-extrabold neon-accent">Digital Boy</h1>
+      <p class="text-pink-400 text-sm animate__animated animate__fadeIn animate__delay-1s">
+        Innovating Electronics, Inspiring Minds ⚡
+      </p>
+    </div>
+    <ul class="flex gap-6 mt-3 md:mt-0">
+      <li><a href="#projects" class="hover:text-cyan-300">Projects</a></li>
+      <li><a href="#connect" class="hover:text-pink-400">Connect</a></li>
+      <li><a href="#about" class="hover:text-purple-400">About</a></li>
+    </ul>
+  </nav>
 
   <!-- Hero Section -->
-  <section class="text-center py-20 px-6">
-    <h2 class="text-4xl md:text-5xl font-bold text-blue-400 mb-4">Welcome to Digital Boy</h2>
-    <p class="text-xl text-gray-300 mb-6">Exploring Arduino & ESP32 projects that turn ideas into reality 🚀</p>
-    <div class="flex justify-center space-x-6">
-      <!-- GitHub -->
-      <a href="https://github.com/Giant20131" target="_blank" class="text-gray-300 hover:text-white text-4xl">
-        <i class="fab fa-github"></i>
-      </a>
-      <!-- YouTube -->
-      <a href="https://www.youtube.com/@digitalboy_projects/videos" target="_blank" class="text-red-500 hover:text-red-400 text-4xl">
-        <i class="fab fa-youtube"></i>
-      </a>
-    </div>
+  <section class="text-center py-20 bg-gradient-to-r from-purple-900 via-black to-cyan-900">
+    <h2 class="text-5xl font-extrabold mb-6 neon-accent animate__animated animate__fadeInDown">Welcome to Digital Boy</h2>
+    <p class="text-lg max-w-2xl mx-auto mb-8 text-gray-300 animate__animated animate__fadeInUp animate__delay-1s">
+      Turning Ideas into Circuits, One Project at a Time ⚡
+    </p>
+    <a href="https://www.youtube.com/@digitalboy_projects/videos" target="_blank" class="neon-btn animate__animated animate__pulse animate__infinite">
+      Visit My YouTube Channel
+    </a>
   </section>
 
   <!-- Projects Section -->
   <section id="projects" class="py-16 px-6">
-    <h3 class="text-3xl font-bold text-center mb-10 text-yellow-400">Featured Projects</h3>
-    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <h3 class="text-4xl font-bold text-center mb-12 neon-accent">⚡ Featured Projects ⚡</h3>
+    <div class="grid md:grid-cols-2 gap-10">
       
-      <!-- Project 1: RC Car -->
+      <!-- Project 1 -->
       <a href="https://github.com/Giant20131/RC_CAR" target="_blank" 
-         class="bg-[#252735] rounded-2xl shadow-lg p-6 hover:scale-105 transition card block">
-        <h4 class="text-xl font-semibold mb-2 text-blue-300">🏎️ RC Car using ESP32</h4>
-        <p class="text-gray-300">A Wi-Fi controlled RC car built with ESP32, featuring smartphone control and real-time response.</p>
+         class="p-6 neon-card neon-border animate__animated animate__fadeInLeft">
+        <h4 class="text-2xl font-semibold mb-2 text-cyan-300">🚗 RC Car using ESP32</h4>
+        <p class="text-gray-300">Wi-Fi controlled RC car with real-time response using ESP32.</p>
       </a>
 
-      <!-- Project 2: Home Automation -->
+      <!-- Project 2 -->
       <a href="https://github.com/Giant20131/Blynk-Home-Automation" target="_blank" 
-         class="bg-[#252735] rounded-2xl shadow-lg p-6 hover:scale-105 transition card block">
-        <h4 class="text-xl font-semibold mb-2 text-blue-300">🏠📡 Home Automation using ESP32</h4>
-        <p class="text-gray-300">Control home appliances with ESP32 via smartphone app and Wi-Fi, enabling smart home automation.</p>
+         class="p-6 neon-card neon-border animate__animated animate__fadeInRight">
+        <h4 class="text-2xl font-semibold mb-2 text-pink-400">🏠 Home Automation using ESP32</h4>
+        <p class="text-gray-300">Control home appliances with ESP32 and smartphone app for a smart lifestyle.</p>
       </a>
 
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 px-6 bg-[#252735] text-center">
-    <h3 class="text-3xl font-bold text-yellow-400 mb-6">Contact Me</h3>
-    <p class="text-gray-300 mb-4">Let’s collaborate on Arduino & ESP32 projects!</p>
-    <a href="mailto:your-email@example.com" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">
-      📧 Send Email
-    </a>
+  <!-- Connect Section -->
+  <section id="connect" class="py-16 text-center bg-black bg-opacity-80 mx-6 rounded-xl neon-border">
+    <h3 class="text-4xl font-bold mb-6 neon-accent">🌐 Connect With Me</h3>
+    <p class="mb-8 text-gray-300">Find all my projects and tutorials on GitHub & YouTube 🚀</p>
+    <div class="flex justify-center gap-16">
+      
+      <!-- GitHub -->
+      <a href="https://github.com/Giant20131" target="_blank" class="flex flex-col items-center group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 text-cyan-400 group-hover:text-cyan-200 transition" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-1.9c-3.2.7-3.9-1.5-3.9-1.5-.6-1.5-1.5-1.9-1.5-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.2 2 3.2 1.5 4 .8.1-.9.5-1.5.8-1.8-2.5-.3-5.2-1.2-5.2-5.6 0-1.2.4-2.1 1-2.9-.1-.2-.4-1.3.1-2.7 0 0 .8-.2 2.7 1 .8-.2 1.6-.3 2.5-.3.9 0 1.7.1 2.5.3 1.9-1.2 2.7-1 2.7-1 .5 1.4.2 2.5.1 2.7.6.8 1 1.7 1 2.9 0 4.4-2.7 5.3-5.2 5.6.5.4.9 1.2.9 2.4v3.6c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5z"/>
+        </svg>
+        <span class="mt-2">GitHub</span>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@digitalboy_projects/videos" target="_blank" class="flex flex-col items-center group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 text-red-500 group-hover:text-pink-400 transition" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.5 6.2s-.2-1.7-.9-2.5c-.8-.9-1.7-.9-2.1-1-3-.2-7.5-.2-7.5-.2h-.1s-4.5 0-7.5.2c-.4 0-1.3.1-2.1 1-.7.8-.9 2.5-.9 2.5S2 8.2 2 10.2v1.6c0 2 .2 4 0 6 0 0 .2 1.7.9 2.5.8.9 1.9.9 2.4 1 1.8.2 7.2.2 7.2.2s4.5 0 7.5-.2c.4 0 1.3-.1 2.1-1 .7-.8.9-2.5.9-2.5s.2-2 .2-4v-1.6c0-2-.2-4-.2-4zm-13.9 7.5V8.5l6.4 2.6-6.4 2.6z"/>
+        </svg>
+        <span class="mt-2">YouTube</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-6">
+    <h3 class="text-4xl font-bold text-center mb-8 neon-accent">👨‍💻 About Me</h3>
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-gray-300">Hi, I’m <span class="text-cyan-300 font-semibold">Digital Boy</span> 👋.  
+      I build exciting Arduino and ESP projects to help makers and students learn IoT, robotics, and electronics.  
+      My mission is to simplify technology through hands-on projects and tutorials 🚀.</p>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-6 text-center text-gray-400 text-sm bg-[#1a1b26]">
-    © 2025 Digital Boy | Built with ❤️ for innovation
+  <footer class="text-center py-6 bg-black">
+    <p class="text-cyan-300">&copy; 2025 Digital Boy | All Rights Reserved</p>
   </footer>
 
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
